@@ -36,13 +36,13 @@ main() {
   int tc = 1; if (uwbt17) cin >> tc;
   for (int cs = 1; cs <= tc; cs ++) {
     ka();
-	if (cs < tc) {
+    if (cs < tc) {
 	cout << '\n';
 	#ifdef LOCAL
 	cout << '\n';
 	#endif
     }
-}
+  }
   #ifdef LOCAL
   cout << "\n\nTime elapsed: " << double(clock()) / CLOCKS_PER_SEC << " s.";
   #endif
