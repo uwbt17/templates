@@ -1,7 +1,9 @@
 struct seg_tree {
 	static const int good_val = 0; // 0 for sum, -inf for max and inf for min
+	int n;
 	int t[N << 2];
 	int put[N << 2];
+	seg_tree (int_n) : n(_n) {}
 	int merge (int a, int b) { return a + b; }
 	void push (int v, int tl, int tr) {
 		if (!put[v]) return;
