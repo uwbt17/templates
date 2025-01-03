@@ -14,7 +14,7 @@ struct seg_tree {
 		}
 		put[v] = 0;
 	}
-	void upd (int l, int r, int val, int v = 1, int tl = 1, int tr = N - 1) {
+	void upd (int l, int r, int val, int v = 1, int tl = 1, int tr = n) {
 		push(v, tl, tr);
 		if (r < tl || tr  < l) return;
 		if (l <= tl && tr <= r) {
@@ -27,7 +27,7 @@ struct seg_tree {
 		upd(l, r, val, v + v + 1, tm + 1, tr);
 		t[v] = merge(t[v + v], t[v + v + 1]);
 	}
-	int get (int l, int r, int v = 1, int tl = 1, int tr = N - 1) {
+	int get (int l, int r, int v = 1, int tl = 1, int tr = n) {
 		push(v, tl, tr);
 		if (r < tl || tr  < l) return good_val;
 		if (l <= tl && tr <= r) return t[v];
